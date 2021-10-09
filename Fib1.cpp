@@ -22,24 +22,29 @@ int fibR(int i)
         return fibR(i - 1) + fibR(i - 2);
 }  */
 
+ /* решение через цикл: */
 
-int fibR(int n);
+int fibF(int n);
 
 int main()
 {
-    int n = 0;
-    cin >> n;
-    cout << fibR(n) << endl;
+    int n;
 
-    return 0;
+    cin >> n;
+
+    cout << fibF(n) << endl;    
+
+return 0;
 }
 
-int fibR(int n)
-{
-      
-    int k = 3;
+int fibF(int n)
 
-    int nN;
+{
+    int tSum;
+    
+    int a = 0;
+
+    int b = 1; 
 
     if (n == 0)
         return 0;
@@ -47,20 +52,26 @@ int fibR(int n)
         return 1;
     if (n == 2)
         return 1;
-    if (n > 2)
+    if (n > 2);
+    
+        for (int i = 0; i < (n-1); i++)
+
+            {            
+                tSum = a + b;
+
+                a = b;
+
+                b = tSum;               
+            }
+        return tSum;
+        
+} 
 
 
 
-        for (int n=3; k <= n; n++)
+    
+    
 
-        {            
+        
+         
 
-            k = (k-1) + (k-2);
-
-        }
-
-    nN = k;    
-
-    return nN;
-
-}
